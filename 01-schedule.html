@@ -1,0 +1,309 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Owl Stylesheets -->
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+    <!-- Full Calendar Stylesheets -->
+    <link rel="stylesheet" href="css/fullcalendar-core-main.min.css">
+    <!-- date range picker CSS -->
+    <link rel="stylesheet" href="css/daterangepicker.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/theme.css">
+    <title></title>
+  </head>
+  <body>
+  <button onclick="topFunction()" id="top" title="Return to top" class="btn-2top myicon icon-arrow-up"></button>
+  <!-- Header begin -->
+  <div class="header-fluid">
+    <nav class="navbar-main navbar-fixed-top">
+      <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="00-index.html"><img src="images/taibif-logo-rgb-l.jpg" class="hidden-xs navbar-brand-l"><img src="images/taibif-logo-rgb-s.jpg" class="visible-xs navbar-brand-s"></a>
+        <div class="row">
+          <!-- hidden xs begin -->
+          <div class="hidden-xs col-xs-6 navbar-hidden-xs">
+            <div class="navbar-search-wrapper">
+              <input type="text" class="navbar-search-input" placeholder="全站搜尋...">
+              <button class="navbar-search-btn" type="button">
+                <span class="myicon icon-search"></span>
+              </button>
+            </div>
+            <a href="#" class="navbar-oval-btn"><span class="myicon icon-social-fb"></span></a>
+            <a href="#" class="navbar-oval-btn"><span class="myicon icon-social-yt"></span></a>
+            <a href="#" class="navbar-language-btn"><span class="myicon icon-language"></span>English</a>
+          </div>
+          <!-- hidden xs end -->
+          <!-- visible xs begin -->
+          <div class="visible-xs col-xs-6 navbar-visible-xs">
+            <a href="#" class="navbar-icon-btn" id="xs-navbtn-search" data-toggle="modal" data-target=".xs-search-modal-pos">
+              <span class="myicon icon-search"></span>
+            </a>
+            <a href="#" class="navbar-icon-btn" id="xs-navbtn-lang" data-toggle="modal" data-target=".xs-lang-modal-pos">
+              <span class="myicon icon-language"></span>
+            </a>
+          </div>
+          <!-- visible xs end -->
+        </div>
+      </div>
+
+      <div class="navbar-collapse-wrapper">
+        <div class="container">
+          <div class="navbar-collapse collapse" id="navbar">
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="DropdownMenu-data" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  資料開放
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="DropdownMenu-data">
+                  <li><a href="#">Open Data 概述</a></li>
+                  <li><a href="#">資料發布狀況</a></li>
+                  <li><a href="01-schedule.html">資料上傳</a></li>
+                  <li><a href="01-journals.html">資料期刊/論文</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="DropdownMenu-tool" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  工具與文件
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="DropdownMenu-tool">
+                  <li><a href="02-tools.html">工具分享</a></li>
+                  <li><a href="#">檔案下載</a></li>
+                  <li><a href="02-cookbookList.html">Cookbook</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="DropdownMenu-about" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  關於 TaiBIF
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="DropdownMenu-about">
+                  <li><a href="#">TaiBIF 簡介</a></li>
+                  <li><a href="03-planList.html">TaiBIF 年度計畫成果</a></li>
+                  <li><a href="#">GBIF 介紹</a></li>
+                  <li><a href="03-contact.html">聯絡我們</a></li>
+                  <li><a href="03-sites.html">相關連結</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="DropdownMenu-more" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  更多資訊
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="DropdownMenu-more">
+                  <li class="dropdown-group-wrapper clearfix">
+                    <ul class="dropdown-group-ctn">
+                      <li class="dropdown-group-cate hidden-xs">最新消息</li>
+                      <li><a href="04-newsList.html">新聞</a></li>
+                      <li><a href="#">活動</a></li>
+                      <li><a href="#">更新</a></li>
+                    </ul>
+                    <ul class="dropdown-group-ctn">
+                      <li class="dropdown-group-cate hidden-xs">專題文章</li>
+                      <li><a href="04-topicList.html">科普文章</a></li>
+                      <li><a href="#">技術專欄</a></li>
+                      <li><a href="#">出版品資料</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="visible-xs navbar-collapse-xs">
+                追蹤：
+                <a href="#"><span class="myicon icon-social-fb"></span></a>
+                <a href="#"><span class="myicon icon-social-yt"></span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- xs-search-modal begin -->
+  <div class="modal fade xs-modal-wrapper xs-search-modal-pos" data-backdrop="false">
+    <div class="xs-modal-content">
+      <div class="xs-modal-header">
+        <span class="xs-search-modal-close myicon icon-close" data-dismiss="modal" aria-label="Close"></span>
+        <p class="text-center xs-modal-title">搜尋</p>
+      </div>
+      <div class="xs-modal-body">
+        <div class="xs-search-modal-input-group">
+          <input type="text" class="navbar-search-input" placeholder="請輸入關鍵字...">
+          <button class="navbar-search-btn" type="button">
+            <span class="myicon icon-search"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- xs-search-modal end -->
+
+  <!-- xs-lang-modal begin -->
+  <div class="modal fade xs-modal-wrapper xs-lang-modal-pos" role="dialog" data-backdrop="false">
+    <div class="xs-modal-content">
+      <div class="xs-modal-header">
+        <span class="xs-search-modal-close myicon icon-close" data-dismiss="modal" aria-label="Close"></span>
+        <p class="text-center xs-modal-title">Change Lamguage</p>
+      </div>
+      <div class="xs-modal-body">
+        <label class="custom-input-ctn">
+          <input type="radio" name="radio">
+          <span class="radiomark"></span>
+          English
+        </label>
+      </div>
+    </div>
+  </div>
+  <!-- xs-lang-modal end -->
+
+  <!-- Header end -->
+
+  <!-- breadcrumb begin -->
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><a href="00-index.html">首頁</a></li>
+      <li>資料開放</li>
+      <li class="active">資料上傳</li>
+      <li class="active">科技部資料繳交依據與時程</li>
+    </ol>
+  </div>
+  <!-- breadcrumb end -->
+
+  <!-- container begin -->
+  <div class="container">
+    <!-- row begin -->
+    <div class="row">
+      <!-- visible-xs modal begin -->
+      <div class="visible-xs">
+        <a href="javascript:void(0)" class="xs-schedule-flow-btn myicon icon-arrow-left" data-toggle="modal" data-target="#flowBtnModal">
+          更多資料上傳介紹
+        </a>
+      </div>
+
+      <!-- xs-schedule-navBtn-modal begin -->
+      <div class="modal right fade" id="flowBtnModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+
+            <div class="modal-body">
+              <span class="modal-close myicon icon-close" data-dismiss="modal" aria-label="Close"></span>
+              <ul class="schedule-flow-nav-wrapper">
+                <li><a href="#">操作流程</a></li>
+                <li><a href="#">資料格式說明</a></li>
+                <li><a href="#">授權方式說明</a></li>
+                <li><a href="#">資料上傳網站 (IPT)</a></li>
+                <li><a href="#" class="active">科技部資料繳交依據與時程</a></li>
+              </ul>
+              </p>
+            </div>
+
+          </div>
+          <!-- modal-content -->
+        </div>
+        <!-- modal-dialog -->
+      </div>
+      <!-- xs-schedule-navBtn-modal end -->
+
+      <!-- visible-xs modal end -->
+
+
+      <!-- left nav begin -->
+      <div class="col-sm-3 hidden-xs">
+        <ul class="schedule-flow-nav-wrapper">
+          <li><a href="#">操作流程</a></li>
+          <li><a href="#">資料格式說明</a></li>
+          <li><a href="#">授權方式說明</a></li>
+          <li><a href="#">資料上傳網站 (IPT)</a></li>
+          <li><a href="#" class="active">科技部資料繳交依據與時程</a></li>
+        </ul>
+      </div>
+      <!-- left nav end -->
+      <!-- right content begin -->
+      <div class="col-xs-12 col-sm-9">
+        <h1 class="heading-lg-ul">
+           科技部資料繳交依據與時程
+        </h1>
+        <p>台灣是在地質活動頻繁的大陸島，於 200-300 萬年前形成於四塊板塊所組成的聚合板塊邊緣之上。在這篇台灣植物相的研究中，研究者運用了 GBIF 整合之東亞與南亞開花植物類群分布的點位資料，再區分特有種與非特有種後，推測出後者潛在的播遷來源。</p>
+
+        <div class="article-img-wrapper">
+          <img src="images/workflow-most-ipt.jpg" class="img-responsive">
+          <span>
+            資料管理流程 @TaiBIF，以上依科技部制定「生物多樣性及長期生態研究計畫之物種分布資料釋出作業規範」辦理
+          </span>
+        </div>
+
+        <div class="schedule-flow-wrapper schedule-flow-skin-1">
+          <div class="schedule-flow-title">1. 填寫詮釋資料</div>
+          <div class="schedule-flow-content">科技部計畫申請通過後即應填寫詮釋資料 (e.g. 聯絡人、時間、地理範圍)，讓其他人更能掌握資料及內容。</div>
+        </div>
+
+        <div class="schedule-flow-wrapper schedule-flow-skin-1">
+          <div class="schedule-flow-title">2. 原始資料是否包含物種資料？</div>
+          <div class="schedule-flow-content">科技部計畫申請通過後即應填寫詮釋資料 (e.g. 聯絡人、時間、地理範圍)，讓其他人更能掌握資料及內容。</div>
+        </div>
+
+        <div class="schedule-flow-wrapper schedule-flow-skin-1">
+          <div class="schedule-flow-title">3. 上傳計畫報告</div>
+          <div class="schedule-flow-content">科技部計畫申請通過後即應填寫詮釋資料 (e.g. 聯絡人、時間、地理範圍)，讓其他人更能掌握資料及內容。</div>
+        </div>
+
+        <div class="schedule-flow-wrapper schedule-flow-skin-2">
+          <div class="schedule-flow-title">4. 資料檢核</div>
+          <div class="schedule-flow-content">科技部計畫申請通過後即應填寫詮釋資料 (e.g. 聯絡人、時間、地理範圍)，讓其他人更能掌握資料及內容。</div>
+        </div>
+
+        <div class="schedule-flow-wrapper schedule-flow-skin-2">
+          <div class="schedule-flow-title">5. 利用 IPT 上傳</div>
+          <div class="schedule-flow-content">科技部計畫申請通過後即應填寫詮釋資料 (e.g. 聯絡人、時間、地理範圍)，讓其他人更能掌握資料及內容。</div>
+        </div>
+
+        <div class="schedule-flow-wrapper schedule-flow-skin-2">
+          <div class="schedule-flow-title">6. 更新詮釋資料</div>
+          <div class="schedule-flow-content">科技部計畫申請通過後即應填寫詮釋資料 (e.g. 聯絡人、時間、地理範圍)，讓其他人更能掌握資料及內容。</div>
+        </div>
+
+        <div class="schedule-flow-wrapper schedule-flow-skin-2">
+          <div class="schedule-flow-title">7. 發布及公開資料</div>
+          <div class="schedule-flow-content">科技部計畫申請通過後即應填寫詮釋資料 (e.g. 聯絡人、時間、地理範圍)，讓其他人更能掌握資料及內容。</div>
+        </div>
+
+      </div>
+      <!-- right content end -->
+    </div>
+    <!-- row end -->
+  </div>
+  <!-- container end -->
+
+  <!-- footer begin -->
+  <div class="container-fluid footer-wrapper">
+    <div class="container">
+      <div id='calendar'></div>
+      <a href="00-index.html"><img src="images/taibif-logo-w-l.png" class="ft-brand center-block"></a>
+      <p class="ft-contact">
+          <span class="myicon icon-pin-stroke" aria-hidden="true">11529 台北市南港區研究院路二段 128 號</span>
+          <span class="ft-xs-block">跨領域科技研究大樓 C301室</span>
+      </p>
+      <p class="ft-copywrite">Copyright © TaiBIF 臺灣生物多樣性資訊機構</p>
+    </div>
+  </div>
+  <!-- footer end -->
+
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/page.js"></script>
+
+  </body>
+</html>

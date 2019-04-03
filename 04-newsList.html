@@ -1,0 +1,433 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Owl Stylesheets -->
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+    <!-- Full Calendar Stylesheets -->
+    <link rel="stylesheet" href="css/fullcalendar-core-main.min.css">
+    <!-- date range picker CSS -->
+    <link rel="stylesheet" href="css/daterangepicker.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/theme.css">
+    <title></title>
+  </head>
+  <body>
+  <!-- Header begin -->
+  <div class="header-fluid">
+    <nav class="navbar-main navbar-fixed-top">
+      <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="00-index.html"><img src="images/taibif-logo-rgb-l.jpg" class="hidden-xs navbar-brand-l"><img src="images/taibif-logo-rgb-s.jpg" class="visible-xs navbar-brand-s"></a>
+        <div class="row">
+          <!-- hidden xs begin -->
+          <div class="hidden-xs col-xs-6 navbar-hidden-xs">
+            <div class="navbar-search-wrapper">
+              <input type="text" class="navbar-search-input" placeholder="全站搜尋...">
+              <button class="navbar-search-btn" type="button">
+                <span class="myicon icon-search"></span>
+              </button>
+            </div>
+            <a href="#" class="navbar-oval-btn"><span class="myicon icon-social-fb"></span></a>
+            <a href="#" class="navbar-oval-btn"><span class="myicon icon-social-yt"></span></a>
+            <a href="#" class="navbar-language-btn"><span class="myicon icon-language"></span>English</a>
+          </div>
+          <!-- hidden xs end -->
+          <!-- visible xs begin -->
+          <div class="visible-xs col-xs-6 navbar-visible-xs">
+            <a href="#" class="navbar-icon-btn" id="xs-navbtn-search" data-toggle="modal" data-target=".xs-search-modal-pos">
+              <span class="myicon icon-search"></span>
+            </a>
+            <a href="#" class="navbar-icon-btn" id="xs-navbtn-lang" data-toggle="modal" data-target=".xs-lang-modal-pos">
+              <span class="myicon icon-language"></span>
+            </a>
+          </div>
+          <!-- visible xs end -->
+        </div>
+      </div>
+
+      <div class="navbar-collapse-wrapper">
+        <div class="container">
+          <div class="navbar-collapse collapse" id="navbar">
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="DropdownMenu-data" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  資料開放
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="DropdownMenu-data">
+                  <li><a href="#">Open Data 概述</a></li>
+                  <li><a href="#">資料發布狀況</a></li>
+                  <li><a href="01-schedule.html">資料上傳</a></li>
+                  <li><a href="01-journals.html">資料期刊/論文</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="DropdownMenu-tool" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  工具與文件
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="DropdownMenu-tool">
+                  <li><a href="02-tools.html">工具分享</a></li>
+                  <li><a href="#">檔案下載</a></li>
+                  <li><a href="02-cookbookList.html">Cookbook</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="DropdownMenu-about" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  關於 TaiBIF
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="DropdownMenu-about">
+                  <li><a href="#">TaiBIF 簡介</a></li>
+                  <li><a href="03-planList.html">TaiBIF 年度計畫成果</a></li>
+                  <li><a href="#">GBIF 介紹</a></li>
+                  <li><a href="03-contact.html">聯絡我們</a></li>
+                  <li><a href="03-sites.html">相關連結</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="DropdownMenu-more" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  更多資訊
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="DropdownMenu-more">
+                  <li class="dropdown-group-wrapper clearfix">
+                    <ul class="dropdown-group-ctn">
+                      <li class="dropdown-group-cate hidden-xs">最新消息</li>
+                      <li><a href="04-newsList.html">新聞</a></li>
+                      <li><a href="#">活動</a></li>
+                      <li><a href="#">更新</a></li>
+                    </ul>
+                    <ul class="dropdown-group-ctn">
+                      <li class="dropdown-group-cate hidden-xs">專題文章</li>
+                      <li><a href="04-topicList.html">科普文章</a></li>
+                      <li><a href="#">技術專欄</a></li>
+                      <li><a href="#">出版品資料</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="visible-xs navbar-collapse-xs">
+                追蹤：
+                <a href="#"><span class="myicon icon-social-fb"></span></a>
+                <a href="#"><span class="myicon icon-social-yt"></span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- xs-search-modal begin -->
+  <div class="modal fade xs-modal-wrapper xs-search-modal-pos" data-backdrop="false">
+    <div class="xs-modal-content">
+      <div class="xs-modal-header">
+        <span class="xs-search-modal-close myicon icon-close" data-dismiss="modal" aria-label="Close"></span>
+        <p class="text-center xs-modal-title">搜尋</p>
+      </div>
+      <div class="xs-modal-body">
+        <div class="xs-search-modal-input-group">
+          <input type="text" class="navbar-search-input" placeholder="請輸入關鍵字...">
+          <button class="navbar-search-btn" type="button">
+            <span class="myicon icon-search"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- xs-search-modal end -->
+
+  <!-- xs-lang-modal begin -->
+  <div class="modal fade xs-modal-wrapper xs-lang-modal-pos" role="dialog" data-backdrop="false">
+    <div class="xs-modal-content">
+      <div class="xs-modal-header">
+        <span class="xs-search-modal-close myicon icon-close" data-dismiss="modal" aria-label="Close"></span>
+        <p class="text-center xs-modal-title">Change Lamguage</p>
+      </div>
+      <div class="xs-modal-body">
+        <label class="custom-input-ctn">
+          <input type="radio" name="radio">
+          <span class="radiomark"></span>
+          English
+        </label>
+      </div>
+    </div>
+  </div>
+  <!-- xs-lang-modal end -->
+
+  <!-- Header end -->
+
+  <!-- carousel begin -->
+  <div id="carousel-example" class="carousel slide" data-ride="carousel">
+    <!-- carousel indicators begin -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example" data-slide-to="1"></li>
+    </ol>
+    <!-- carousel indicators end -->
+
+    <!-- carousel content wrapper begin -->
+    <div class="carousel-inner" role="listbox">
+      <div class="head-carousel-wrapper item active" style="background-image: url('images/photo-1.jpg');">
+        <a href="04-topicStory.html" class="head-carousel-btn"></a>
+        <div class="carousel-caption">
+          <span class="head-carousel-cate">熱門新聞</span>
+          <h3 class="head-carousel-title">亞洲生物多樣性資訊基金 (BIFA) 開始申請囉！</h3>
+        </div>
+      </div>
+
+      <div class="head-carousel-wrapper item" style="background-image: url('images/photo-2.jpg');">
+        <a href="04-topicStory.html" class="head-carousel-btn"></a>
+        <div class="carousel-caption">
+          <span class="head-carousel-cate">熱門新聞</span>
+          <h3 class="head-carousel-title">生物多樣性資料校對轉換工具，新增中文名對應學名功能</h3>
+        </div>
+      </div>
+
+    </div>
+    <!-- carousel content wrapper begin -->
+
+    <!-- carousel controls begin -->
+    <a class="left carousel-control" href="#carousel-example" role="button" data-slide="prev">
+      <span class="myicon icon-arrow-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example" role="button" data-slide="next">
+      <span class="myicon icon-arrow-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    <!-- carousel controls end -->
+  </div>
+  <!-- carousel end -->
+
+  <!-- breadcrumb begin -->
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><a href="00-index.html">首頁</a></li>
+      <li>更多資訊</li>
+      <li class="active">新聞</li>
+    </ol>
+  </div>
+  <!-- breadcrumb end -->
+
+  <!-- container begin -->
+  <div class="container">
+    <h1 class="heading-lg-ul">
+      新聞
+      <span class="heading-footnote">全部</span>
+    </h1>
+    <!-- sort by begin -->
+    <div class="heading-sort-ctn">
+      <form class="form-inline">
+        <span class="heading-sort-name">篩選</span>
+        <div class="input-group">
+          <div class="input-group-addon">
+            <i class="glyphicon glyphicon-calendar"></i>
+          </div>
+          <input type="text" class="form-control" placeholder="以時間篩選新聞..." id="newsFilter">
+        </div>
+      </form>
+    </div>
+    <!-- sort by end -->
+
+    <!-- list begin (firset one) -->
+    <div class="row listbox-img-right-wrapper">
+      <div class="col-xs-8">
+        <span class="listbox-inner-date">2018/12/08</span>
+        <h3 class="listbox-inner-title"><a href="04-topicStory.html">GBIF 正式與生物多樣性評估平台展開合作</a></h3>
+        <p class="listbox-inner-summary hidden-xs">
+          <a href="04-topicStory.html">這項 MoU 在哥倫比亞麥德林市舉辦的 IPBES 第六次全體會議的中簽署，超過 80 個政府組織同意除將評估非洲、美洲、亞洲與太平洋以及歐洲與中亞等四個地區的生物多樣性與生態服務納入提案外，亦會將評估土地流失與恢復納入。</a>
+        </p>
+      </div>
+      <div class="col-xs-4">
+        <a href="04-topicStory.html"><img src="images/photo-3.jpg" class="img-responsive"></a>
+      </div>
+    </div>
+    <!-- list end (firset one) -->
+
+    <!-- 2~10 begin -->
+    <div class="row listbox-img-right-wrapper">
+      <div class="col-xs-8">
+        <span class="listbox-inner-date">2018/12/08</span>
+        <h3 class="listbox-inner-title"><a href="04-topicStory.html">GBIF 正式與生物多樣性評估平台展開合作</a></h3>
+        <p class="listbox-inner-summary hidden-xs">
+          <a href="04-topicStory.html">這項 MoU 在哥倫比亞麥德林市舉辦的 IPBES 第六次全體會議的中簽署，超過 80 個政府組織同意除將評估非洲、美洲、亞洲與太平洋以及歐洲與中亞等四個地區的生物多樣性與生態服務納入提案外，亦會將評估土地流失與恢復納入。</a>
+        </p>
+      </div>
+      <div class="col-xs-4">
+        <a href="04-topicStory.html"><img src="images/photo-3.jpg" class="img-responsive"></a>
+      </div>
+    </div>
+
+    <div class="row listbox-img-right-wrapper">
+      <div class="col-xs-8">
+        <span class="listbox-inner-date">2018/12/08</span>
+        <h3 class="listbox-inner-title"><a href="04-topicStory.html">GBIF 正式與生物多樣性評估平台展開合作</a></h3>
+        <p class="listbox-inner-summary hidden-xs">
+          <a href="04-topicStory.html">這項 MoU 在哥倫比亞麥德林市舉辦的 IPBES 第六次全體會議的中簽署，超過 80 個政府組織同意除將評估非洲、美洲、亞洲與太平洋以及歐洲與中亞等四個地區的生物多樣性與生態服務納入提案外，亦會將評估土地流失與恢復納入。</a>
+        </p>
+      </div>
+      <div class="col-xs-4">
+        <a href="04-topicStory.html"><img src="images/photo-3.jpg" class="img-responsive"></a>
+      </div>
+    </div>
+
+    <div class="row listbox-img-right-wrapper">
+      <div class="col-xs-8">
+        <span class="listbox-inner-date">2018/12/08</span>
+        <h3 class="listbox-inner-title"><a href="04-topicStory.html">GBIF 正式與生物多樣性評估平台展開合作</a></h3>
+        <p class="listbox-inner-summary hidden-xs">
+          <a href="04-topicStory.html">這項 MoU 在哥倫比亞麥德林市舉辦的 IPBES 第六次全體會議的中簽署，超過 80 個政府組織同意除將評估非洲、美洲、亞洲與太平洋以及歐洲與中亞等四個地區的生物多樣性與生態服務納入提案外，亦會將評估土地流失與恢復納入。</a>
+        </p>
+      </div>
+      <div class="col-xs-4">
+        <a href="04-topicStory.html"><img src="images/photo-3.jpg" class="img-responsive"></a>
+      </div>
+    </div>
+
+    <div class="row listbox-img-right-wrapper">
+      <div class="col-xs-8">
+        <span class="listbox-inner-date">2018/12/08</span>
+        <h3 class="listbox-inner-title"><a href="04-topicStory.html">GBIF 正式與生物多樣性評估平台展開合作</a></h3>
+        <p class="listbox-inner-summary hidden-xs">
+          <a href="04-topicStory.html">這項 MoU 在哥倫比亞麥德林市舉辦的 IPBES 第六次全體會議的中簽署，超過 80 個政府組織同意除將評估非洲、美洲、亞洲與太平洋以及歐洲與中亞等四個地區的生物多樣性與生態服務納入提案外，亦會將評估土地流失與恢復納入。</a>
+        </p>
+      </div>
+      <div class="col-xs-4">
+        <a href="04-topicStory.html"><img src="images/photo-3.jpg" class="img-responsive"></a>
+      </div>
+    </div>
+
+    <div class="row listbox-img-right-wrapper">
+      <div class="col-xs-8">
+        <span class="listbox-inner-date">2018/12/08</span>
+        <h3 class="listbox-inner-title"><a href="04-topicStory.html">GBIF 正式與生物多樣性評估平台展開合作</a></h3>
+        <p class="listbox-inner-summary hidden-xs">
+          <a href="04-topicStory.html">這項 MoU 在哥倫比亞麥德林市舉辦的 IPBES 第六次全體會議的中簽署，超過 80 個政府組織同意除將評估非洲、美洲、亞洲與太平洋以及歐洲與中亞等四個地區的生物多樣性與生態服務納入提案外，亦會將評估土地流失與恢復納入。</a>
+        </p>
+      </div>
+      <div class="col-xs-4">
+        <a href="04-topicStory.html"><img src="images/photo-3.jpg" class="img-responsive"></a>
+      </div>
+    </div>
+
+    <div class="row listbox-img-right-wrapper">
+      <div class="col-xs-8">
+        <span class="listbox-inner-date">2018/12/08</span>
+        <h3 class="listbox-inner-title"><a href="04-topicStory.html">GBIF 正式與生物多樣性評估平台展開合作</a></h3>
+        <p class="listbox-inner-summary hidden-xs">
+          <a href="04-topicStory.html">這項 MoU 在哥倫比亞麥德林市舉辦的 IPBES 第六次全體會議的中簽署，超過 80 個政府組織同意除將評估非洲、美洲、亞洲與太平洋以及歐洲與中亞等四個地區的生物多樣性與生態服務納入提案外，亦會將評估土地流失與恢復納入。</a>
+        </p>
+      </div>
+      <div class="col-xs-4">
+        <a href="04-topicStory.html"><img src="images/photo-3.jpg" class="img-responsive"></a>
+      </div>
+    </div>
+
+    <div class="row listbox-img-right-wrapper">
+      <div class="col-xs-8">
+        <span class="listbox-inner-date">2018/12/08</span>
+        <h3 class="listbox-inner-title"><a href="04-topicStory.html">GBIF 正式與生物多樣性評估平台展開合作</a></h3>
+        <p class="listbox-inner-summary hidden-xs">
+          <a href="04-topicStory.html">這項 MoU 在哥倫比亞麥德林市舉辦的 IPBES 第六次全體會議的中簽署，超過 80 個政府組織同意除將評估非洲、美洲、亞洲與太平洋以及歐洲與中亞等四個地區的生物多樣性與生態服務納入提案外，亦會將評估土地流失與恢復納入。</a>
+        </p>
+      </div>
+      <div class="col-xs-4">
+        <a href="04-topicStory.html"><img src="images/photo-3.jpg" class="img-responsive"></a>
+      </div>
+    </div>
+
+    <div class="row listbox-img-right-wrapper">
+      <div class="col-xs-8">
+        <span class="listbox-inner-date">2018/12/08</span>
+        <h3 class="listbox-inner-title"><a href="04-topicStory.html">GBIF 正式與生物多樣性評估平台展開合作</a></h3>
+        <p class="listbox-inner-summary hidden-xs">
+          <a href="04-topicStory.html">這項 MoU 在哥倫比亞麥德林市舉辦的 IPBES 第六次全體會議的中簽署，超過 80 個政府組織同意除將評估非洲、美洲、亞洲與太平洋以及歐洲與中亞等四個地區的生物多樣性與生態服務納入提案外，亦會將評估土地流失與恢復納入。</a>
+        </p>
+      </div>
+      <div class="col-xs-4">
+        <a href="04-topicStory.html"><img src="images/photo-3.jpg" class="img-responsive"></a>
+      </div>
+    </div>
+
+    <div class="row listbox-img-right-wrapper">
+      <div class="col-xs-8">
+        <span class="listbox-inner-date">2018/12/08</span>
+        <h3 class="listbox-inner-title"><a href="04-topicStory.html">GBIF 正式與生物多樣性評估平台展開合作</a></h3>
+        <p class="listbox-inner-summary hidden-xs">
+          <a href="04-topicStory.html">這項 MoU 在哥倫比亞麥德林市舉辦的 IPBES 第六次全體會議的中簽署，超過 80 個政府組織同意除將評估非洲、美洲、亞洲與太平洋以及歐洲與中亞等四個地區的生物多樣性與生態服務納入提案外，亦會將評估土地流失與恢復納入。</a>
+        </p>
+      </div>
+      <div class="col-xs-4">
+        <a href="04-topicStory.html"><img src="images/photo-3.jpg" class="img-responsive"></a>
+      </div>
+    </div>
+    <!-- 2~10 end -->
+
+    <!-- pagination begin -->
+    <div class="center-block text-center">
+      <ul class="pagination">
+        <li>
+          <a href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li>
+          <a href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- pagination end -->
+
+  </div>
+   <!-- container end -->
+
+  <!-- footer begin -->
+  <div class="container-fluid footer-wrapper">
+    <div class="container">
+      <div id='calendar'></div>
+      <a href="00-index.html"><img src="images/taibif-logo-w-l.png" class="ft-brand center-block"></a>
+      <p class="ft-contact">
+          <span class="myicon icon-pin-stroke" aria-hidden="true">11529 台北市南港區研究院路二段 128 號</span>
+          <span class="ft-xs-block">跨領域科技研究大樓 C301室</span>
+      </p>
+      <p class="ft-copywrite">Copyright © TaiBIF 臺灣生物多樣性資訊機構</p>
+    </div>
+  </div>
+  <!-- footer end -->
+
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/page.js"></script>
+  <!-- date range picker -->
+  <script src="js/daterangepicker/moment.min.js"></script>
+  <script src="js/daterangepicker/daterangepicker.js"></script>
+  <script>
+    $(function () {
+      //Date range picker
+      $('#newsFilter').daterangepicker()
+    })
+  </script>
+
+  </body>
+</html>

@@ -1,0 +1,409 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Owl Stylesheets -->
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+    <!-- Full Calendar Stylesheets -->
+    <link rel="stylesheet" href="css/fullcalendar-core-main.min.css">
+    <!-- date range picker CSS -->
+    <link rel="stylesheet" href="css/daterangepicker.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/theme.css">
+    <title></title>
+  </head>
+  <body>
+  <button onclick="topFunction()" id="top" title="Return to top" class="btn-2top myicon icon-arrow-up"></button>
+  <!-- Header begin -->
+  <div class="header-fluid">
+    <nav class="navbar-main navbar-fixed-top">
+      <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="00-index.html"><img src="images/taibif-logo-rgb-l.jpg" class="hidden-xs navbar-brand-l"><img src="images/taibif-logo-rgb-s.jpg" class="visible-xs navbar-brand-s"></a>
+        <div class="row">
+          <!-- hidden xs begin -->
+          <div class="hidden-xs col-xs-6 navbar-hidden-xs">
+            <div class="navbar-search-wrapper">
+              <input type="text" class="navbar-search-input" placeholder="全站搜尋...">
+              <button class="navbar-search-btn" type="button">
+                <span class="myicon icon-search"></span>
+              </button>
+            </div>
+            <a href="#" class="navbar-oval-btn"><span class="myicon icon-social-fb"></span></a>
+            <a href="#" class="navbar-oval-btn"><span class="myicon icon-social-yt"></span></a>
+            <a href="#" class="navbar-language-btn"><span class="myicon icon-language"></span>English</a>
+          </div>
+          <!-- hidden xs end -->
+          <!-- visible xs begin -->
+          <div class="visible-xs col-xs-6 navbar-visible-xs">
+            <a href="#" class="navbar-icon-btn" id="xs-navbtn-search" data-toggle="modal" data-target=".xs-search-modal-pos">
+              <span class="myicon icon-search"></span>
+            </a>
+            <a href="#" class="navbar-icon-btn" id="xs-navbtn-lang" data-toggle="modal" data-target=".xs-lang-modal-pos">
+              <span class="myicon icon-language"></span>
+            </a>
+          </div>
+          <!-- visible xs end -->
+        </div>
+      </div>
+
+      <div class="navbar-collapse-wrapper">
+        <div class="container">
+          <div class="navbar-collapse collapse" id="navbar">
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="DropdownMenu-data" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  資料開放
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="DropdownMenu-data">
+                  <li><a href="#">Open Data 概述</a></li>
+                  <li><a href="#">資料發布狀況</a></li>
+                  <li><a href="01-schedule.html">資料上傳</a></li>
+                  <li><a href="01-journals.html">資料期刊/論文</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="DropdownMenu-tool" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  工具與文件
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="DropdownMenu-tool">
+                  <li><a href="02-tools.html">工具分享</a></li>
+                  <li><a href="#">檔案下載</a></li>
+                  <li><a href="02-cookbookList.html">Cookbook</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="DropdownMenu-about" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  關於 TaiBIF
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="DropdownMenu-about">
+                  <li><a href="#">TaiBIF 簡介</a></li>
+                  <li><a href="03-planList.html">TaiBIF 年度計畫成果</a></li>
+                  <li><a href="#">GBIF 介紹</a></li>
+                  <li><a href="03-contact.html">聯絡我們</a></li>
+                  <li><a href="03-sites.html">相關連結</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="DropdownMenu-more" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  更多資訊
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="DropdownMenu-more">
+                  <li class="dropdown-group-wrapper clearfix">
+                    <ul class="dropdown-group-ctn">
+                      <li class="dropdown-group-cate hidden-xs">最新消息</li>
+                      <li><a href="04-newsList.html">新聞</a></li>
+                      <li><a href="#">活動</a></li>
+                      <li><a href="#">更新</a></li>
+                    </ul>
+                    <ul class="dropdown-group-ctn">
+                      <li class="dropdown-group-cate hidden-xs">專題文章</li>
+                      <li><a href="04-topicList.html">科普文章</a></li>
+                      <li><a href="#">技術專欄</a></li>
+                      <li><a href="#">出版品資料</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="visible-xs navbar-collapse-xs">
+                追蹤：
+                <a href="#"><span class="myicon icon-social-fb"></span></a>
+                <a href="#"><span class="myicon icon-social-yt"></span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- xs-search-modal begin -->
+  <div class="modal fade xs-modal-wrapper xs-search-modal-pos" data-backdrop="false">
+    <div class="xs-modal-content">
+      <div class="xs-modal-header">
+        <span class="xs-search-modal-close myicon icon-close" data-dismiss="modal" aria-label="Close"></span>
+        <p class="text-center xs-modal-title">搜尋</p>
+      </div>
+      <div class="xs-modal-body">
+        <div class="xs-search-modal-input-group">
+          <input type="text" class="navbar-search-input" placeholder="請輸入關鍵字...">
+          <button class="navbar-search-btn" type="button">
+            <span class="myicon icon-search"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- xs-search-modal end -->
+
+  <!-- xs-lang-modal begin -->
+  <div class="modal fade xs-modal-wrapper xs-lang-modal-pos" role="dialog" data-backdrop="false">
+    <div class="xs-modal-content">
+      <div class="xs-modal-header">
+        <span class="xs-search-modal-close myicon icon-close" data-dismiss="modal" aria-label="Close"></span>
+        <p class="text-center xs-modal-title">Change Lamguage</p>
+      </div>
+      <div class="xs-modal-body">
+        <label class="custom-input-ctn">
+          <input type="radio" name="radio">
+          <span class="radiomark"></span>
+          English
+        </label>
+      </div>
+    </div>
+  </div>
+  <!-- xs-lang-modal end -->
+
+  <!-- Header end -->
+
+  <!-- breadcrumb begin -->
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><a href="00-index.html">首頁</a></li>
+      <li>工具與文件</li>
+      <li><a href="02-cookbookList.html">Cookbook</a></li>
+      <li class="active">適用於生物多樣性的數據標準化做法</li>
+    </ol>
+  </div>
+  <!-- breadcrumb end -->
+
+  <!-- container begin -->
+  <div class="container">
+    <!-- story title & share btns begin -->
+    <div class="article-head-wrapper">
+      <span class="article-post-date">2018/12/08</span>
+      <h1 class="heading-lg-ul">
+        適用於生物多樣性的數據標準化做法
+        <span class="article-author">Takeshi Osawa</span>
+      </h1>
+      <ul class="article-tag-ctn">
+        <li class="listbox-inner-tag"><a href="#">標籤</a></li>
+        <li class="listbox-inner-tag"><a href="#">標籤</a></li>
+      </ul>
+      <div class="article-share-btn-wrapper">
+        分享文章
+        <a href="#" class="navbar-oval-btn"><span class="myicon icon-social-fb"></span></a>
+        <a href="#" class="navbar-oval-btn"><span class="myicon icon-social-twitter"></span></a>
+        <a href="#" class="navbar-oval-btn"><span class="myicon icon-social-line"></span></a>
+        <a href="#" class="navbar-oval-btn"><span class="myicon icon-mail"></span></a>
+      </div>
+    </div>
+    <!-- story title & share btns end -->
+
+    <!-- article content begin -->
+    <div class="article-content-wrapper">
+      <h4 class="heading-md">為什麼要發佈生物多樣性資訊？</h4>
+      <p>資料集包​​括元數據和原始數據。最簡單的資料集只能包含元數據。目前，有四種類型的資料集GBIF支持發布：</p>
+      <ol>
+        <li>僅元數據</li>
+        <li>核對用的清單列表</li>
+        <li>出現紀錄</li>
+        <li>採樣事件資料集</li>
+      </ol>
+      <p>為了保持資料集的完整性，我們建議數據提供者盡可能發布最豐富的資料集。</p>
+      <p><a href="#" class="myicon icon-download-document">Species count for specimen records</a></p>
+
+      <h4 class="heading-md">國際上生物多樣性資料發佈及共享的現況</h4>
+      <p>台灣是在地質活動頻繁的大陸島，於 200-300 萬年前形成於四塊板塊所組成的聚合板塊邊緣之上。在這篇台灣植物相的研究中，研究者運用了 GBIF 整合之東亞與南亞開花植物類群分布的點位資料，再區分特有種與非特有種後，推測出後者潛在的播遷來源。許多豆科植物的生長與繁殖需仰賴與固氮菌 (根瘤菌) 的共生，這共生關係由六千萬年前的單一起源逐步演化而來。</p>
+      <p><a href="#" class="myicon icon-link">Species count for specimen records</a></p>
+
+      <div class="article-img-wrapper">
+        <img src="images/photo-3.jpg" class="img-responsive">
+        <span>臺灣八角金盤 (Fatsia polycarpa), a near threatened evergreen shrub endemic to Taiwan. Photo by yun_shuan_lee licensed under CC BY-NC 4.0.</span>
+      </div>
+
+      <h4 class="heading-md">為什麼要發佈生物多樣性資訊？</h4>
+
+      <p>台灣是在地質活動頻繁的大陸島，於 200-300 萬年前形成於四塊板塊所組成的聚合板塊邊緣之上。在這篇台灣植物相的研究中，研究者運用了 GBIF 整合之東亞與南亞開花植物類群分布的點位資料，再區分特有種與非特有種後，推測出後者潛在的播遷來源。許多豆科植物的生長與繁殖需仰賴與固氮菌 (根瘤菌) 的共生，這共生關係由六千萬年前的單一起源逐步演化而來。</p>
+
+      <div class="table-responsive">
+        <table id="dealer_table" class="table table-bordered">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Plot</th>
+              <th>Zone</th>
+              <th>Common Name</th>
+              <th>SP</th>
+              <th>X</th>
+              <th>Y</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>4094</td>
+              <td>北部</td>
+              <td>大花咸豐草</td>
+              <td>Bidens pilosa L. var. radiata (Sch. Bip.) J. A. Schmidt</td>
+              <td>120.9785</td>
+              <td>24.68604</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>4614</td>
+              <td>西部</td>
+              <td>野茼蒿</td>
+              <td>Conyza sumatrensis (Retz.) E. Walker</td>
+              <td>179.0285</td>
+              <td>42.66068</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>4852</td>
+              <td>南部</td>
+              <td>粗毛小米菊</td>
+              <td>Galinsoga quadriradiata Ruiz & Pav.</td>
+              <td>582.0197</td>
+              <td>867.9165</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>3916</td>
+              <td>北部</td>
+              <td>藿香薊</td>
+              <td>Ageratum conyzoides L.</td>
+              <td>719.2865</td>
+              <td>582.0197</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>台灣是在地質活動頻繁的大陸島，於 200-300 萬年前形成於四塊板塊所組成的聚合板塊邊緣之上。在這篇台灣植物相的研究中，研究者運用了 GBIF 整合之東亞與南亞開花植物類群分布的點位資料，再區分特有種與非特有種後，推測出後者潛在的播遷來源。被海洋切割於所有大陸之外的特性造就了每個島嶼獨一無二的生態棲位。</p>
+    </div>
+    <!-- article content begin -->
+
+    <!-- attachment info begin -->
+    <div class="row article-attachment-wrapper article-prev-next-wrapper">
+      <div class="col-xs-12 col-sm-6 prev-post">
+        <span>上一篇</span>
+        <a href="#">與國際同步：IPT 發佈生物多樣性資訊</a>
+      </div>
+      <div class="col-xs-12 col-sm-6 next-post">
+        <span>下一篇</span>
+        <a href="#">運用聚類分析與 Google 地圖於大量物種出現記錄研究</a>
+      </div>      
+    </div>
+    <!-- attachment info end -->
+
+
+    <!-- related article begin -->
+    <div class="article-related-wrapper">
+      <h4 class="heading-md">推薦文章</h4>
+      <!-- owl-carousel begin -->
+      <div class="owl-carousel owl-theme" id="topic-board">
+        <div class="item">
+          <a href="#"><img src="images/photo-1.jpg"></a>
+          <a class="topic-inner-title" href="#">以台灣生命大百科物種資訊為核心的生物多樣性資訊平台</a>
+        </div>
+
+        <div class="item">
+          <a href="#"><img src="images/photo-2.jpg"></a>
+          <a class="topic-inner-title" href="#">生物多樣性資料校對轉換工具，新增中文名對應學名功能</a>
+        </div>
+
+        <div class="item">
+          <a href="#"><img src="images/photo-4.jpg"></a>
+          <a class="topic-inner-title" href="#">魚類的顏色與社會行為：因公開資料庫而被串連起來的當代與歷史研究</a>
+        </div>
+
+        <div class="item">
+          <a href="#"><img src="images/photo-3.jpg"></a>
+          <a class="topic-inner-title" href="#">亞洲生物多樣性資訊基金 (BIFA) 開始申請囉！開始申請囉！</a>
+        </div>
+      </div>
+      <!-- owl-carousel end -->
+    </div>
+    <!-- related article begin -->
+
+
+
+  </div>
+   <!-- container end -->
+
+  <!-- footer begin -->
+  <div class="container-fluid footer-wrapper">
+    <div class="container">
+      <div id='calendar'></div>
+      <a href="00-index.html"><img src="images/taibif-logo-w-l.png" class="ft-brand center-block"></a>
+      <p class="ft-contact">
+          <span class="myicon icon-pin-stroke" aria-hidden="true">11529 台北市南港區研究院路二段 128 號</span>
+          <span class="ft-xs-block">跨領域科技研究大樓 C301室</span>
+      </p>
+      <p class="ft-copywrite">Copyright © TaiBIF 臺灣生物多樣性資訊機構</p>
+    </div>
+  </div>
+  <!-- footer end -->
+
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/page.js"></script>
+  <!-- owl carousel -->
+  <script src="js/OwlCarousel/owl.carousel.min.js"></script>
+  <script src="js/OwlCarousel/owl.carousel2.thumbs.min.js"></script>
+  <!-- DataTables -->
+  <script src="js/datatable/jquery.dataTables.js"></script>
+  <script src="js/datatable/dataTables.bootstrap.min.js"></script>
+
+  <!-- script 4 owl carousel begin -->
+  <script>
+    $(document).ready(function() {
+      var owl_topic = $('#topic-board');
+      owl_topic.owlCarousel({
+        margin: 20,
+        nav: false,
+        dots: true,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        thumbs: false,
+        responsive:{
+            0:{
+                items:1
+            },
+            650:{
+                items:2
+            },
+            1000:{
+                items:4
+            }
+        }      
+      })
+    })
+  </script>
+  <!-- script 4 owl carousel end -->
+
+  <!-- script 4 data table begin -->
+  <script>
+    $(function () {
+      $('#dealer_table').DataTable({
+        'paging'      : true,
+        'lengthChange': false,
+        'searching'   : false,
+        'ordering'    : false,
+        'info'        : false,
+        'autoWidth'   : false
+      })
+    })
+  </script>
+  <!-- script 4 data table end -->
+
+  </body>
+</html>
