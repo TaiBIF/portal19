@@ -1,0 +1,1196 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Owl Stylesheets -->
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+    <!-- Full Calendar Stylesheets -->
+    <link rel="stylesheet" href="css/fullcalendar-core-main.min.css">
+    <!-- date range picker CSS -->
+    <link rel="stylesheet" href="css/daterangepicker.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+    <!-- range slider -->
+    <link rel="stylesheet" href="css/ion.rangeSlider.min.css">
+
+    <link rel="stylesheet" href="css/theme.css">
+    <title></title>
+  </head>
+  <body>
+  <button onclick="topFunction()" id="top" title="Return to top" class="btn-2top myicon icon-arrow-up"></button>
+  <!-- Header begin -->
+  <div class="header-fluid">
+    <nav class="navbar-main navbar-fixed-top">
+      <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="00-index.html"><img src="images/taibif-logo-rgb-l.jpg" class="hidden-xs navbar-brand-l"><img src="images/taibif-logo-rgb-s.jpg" class="visible-xs navbar-brand-s"></a>
+        <div class="row">
+          <!-- hidden xs begin -->
+          <div class="hidden-xs col-xs-6 navbar-hidden-xs">
+            <div class="navbar-search-wrapper">
+              <input type="text" class="navbar-search-input" placeholder="全站搜尋...">
+              <button class="navbar-search-btn" type="button">
+                <span class="myicon icon-search"></span>
+              </button>
+            </div>
+            <a href="https://www.facebook.com/TaiBIF.tw/" target="_blank" class="navbar-oval-btn"><span class="myicon icon-social-fb"></span></a>
+            <a href="#" target="_blank" class="navbar-oval-btn"><span class="myicon icon-social-yt"></span></a>
+            <a href="#" class="navbar-language-btn"><span class="myicon icon-language"></span>English</a>
+          </div>
+          <!-- hidden xs end -->
+          <!-- visible xs begin -->
+          <div class="visible-xs col-xs-6 navbar-visible-xs">
+            <a href="#" class="navbar-icon-btn" id="xs-navbtn-search" data-toggle="modal" data-target=".xs-search-modal-pos">
+              <span class="myicon icon-search"></span>
+            </a>
+            <a href="#" class="navbar-icon-btn" id="xs-navbtn-lang" data-toggle="modal" data-target=".xs-lang-modal-pos">
+              <span class="myicon icon-language"></span>
+            </a>
+          </div>
+          <!-- visible xs end -->
+        </div>
+      </div>
+
+      <div class="navbar-collapse-wrapper">
+        <div class="container">
+          <div class="navbar-collapse collapse" id="navbar">
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="DropdownMenu-data" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  資料開放
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="DropdownMenu-data">
+                  <li><a href="#">Open Data 概述</a></li>
+                  <li><a href="#">資料發布狀況</a></li>
+                  <li><a href="01-schedule.html">資料上傳</a></li>
+                  <li><a href="01-journals.html">資料期刊/論文</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="DropdownMenu-tool" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  工具與文件
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="DropdownMenu-tool">
+                  <li><a href="02-tools.html">工具分享</a></li>
+                  <li><a href="#">檔案下載</a></li>
+                  <li><a href="02-cookbookList.html">Cookbook</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="DropdownMenu-about" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  關於 TaiBIF
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="DropdownMenu-about">
+                  <li><a href="#">TaiBIF 簡介</a></li>
+                  <li><a href="03-planList.html">TaiBIF 年度計畫成果</a></li>
+                  <li><a href="#">GBIF 介紹</a></li>
+                  <li><a href="03-contact.html">聯絡我們</a></li>
+                  <li><a href="03-sites.html">相關連結</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="DropdownMenu-more" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  更多資訊
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="DropdownMenu-more">
+                  <li class="dropdown-group-wrapper clearfix">
+                    <ul class="dropdown-group-ctn">
+                      <li class="dropdown-group-cate hidden-xs">最新消息</li>
+                      <li><a href="04-newsList.html">新聞</a></li>
+                      <li><a href="#">活動</a></li>
+                      <li><a href="#">更新</a></li>
+                    </ul>
+                    <ul class="dropdown-group-ctn">
+                      <li class="dropdown-group-cate hidden-xs">專題文章</li>
+                      <li><a href="04-topicList.html">科普文章</a></li>
+                      <li><a href="#">技術專欄</a></li>
+                      <li><a href="#">出版品資料</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="visible-xs navbar-collapse-xs">
+                追蹤：
+                <a href="https://www.facebook.com/TaiBIF.tw/" target="_blank"><span class="myicon icon-social-fb"></span></a>
+                <a href="#" target="_blank"><span class="myicon icon-social-yt"></span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- xs-search-modal begin -->
+  <div class="modal fade xs-modal-wrapper xs-search-modal-pos" data-backdrop="false">
+    <div class="xs-modal-content">
+      <div class="xs-modal-header">
+        <span class="xs-search-modal-close myicon icon-close" data-dismiss="modal" aria-label="Close"></span>
+        <p class="text-center xs-modal-title">搜尋</p>
+      </div>
+      <div class="xs-modal-body">
+        <div class="xs-search-modal-input-group">
+          <input type="text" class="navbar-search-input" placeholder="請輸入關鍵字...">
+          <button class="navbar-search-btn" type="button">
+            <span class="myicon icon-search"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- xs-search-modal end -->
+
+  <!-- xs-lang-modal begin -->
+  <div class="modal fade xs-modal-wrapper xs-lang-modal-pos" role="dialog" data-backdrop="false">
+    <div class="xs-modal-content">
+      <div class="xs-modal-header">
+        <span class="xs-search-modal-close myicon icon-close" data-dismiss="modal" aria-label="Close"></span>
+        <p class="text-center xs-modal-title">Change Lamguage</p>
+      </div>
+      <div class="xs-modal-body">
+        <label class="custom-input-ctn">
+          <input type="radio" name="radio">
+          <span class="radiomark"></span>
+          English
+        </label>
+      </div>
+    </div>
+  </div>
+  <!-- xs-lang-modal end -->
+
+  <!-- Header end -->
+
+  <!-- search container begin -->
+  <div class="container-fluid search-container-fluid">
+    <div class="row">
+      <div class="visible-xs">
+        <a href="javascript:void(0)" class="xs-schedule-flow-btn myicon icon-filter" data-toggle="modal" data-target="#flowBtnModal">
+          進階篩選
+        </a>
+      </div>
+
+      <!-- search sidebar begin -->
+      <div class="search-sidebar">
+
+        <!-- search modal begin -->
+        <div class="modal right fade modal-search-side-wrapper" id="flowBtnModal" tabindex="-1" role="dialog">
+          <!-- modal dialog begin -->
+          <div class="modal-dialog" role="document">
+            <!-- modal content begin -->
+            <div class="modal-content">
+
+              <!-- search sidebar header begin -->
+              <div class="search-sidebar-header">
+                <span>出現紀錄</span>
+                <div class="search-sidebar-header-del" data-toggle="tooltip" data-placement="left" title="清除">
+                  <span class="badge">1</span>
+                  <span class="glyphicon glyphicon-trash"></span>
+                </div>
+              </div>
+              <!-- search sidebar header end -->
+
+              <!-- keyword input begin -->
+              <div class="input-group search-sidebar-header-kw">
+                <input class="form-control" placeholder="搜尋關鍵字" name="search-term" id="search-term" type="text" value="">
+                <div class="input-group-btn">
+                  <button class="btn" type="submit">
+                    <i class="glyphicon glyphicon-search"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- keyword input end -->
+
+              <!-- search sidebar accordion begin -->
+              <div class="search-sidebar-accordion-wrapper">
+                <!-- accordion heading begin -->
+                <div class="search-sidebar-accordion-title">
+                  <a data-toggle="collapse" href="#collapse1" aria-expanded="false">
+                    授權狀態
+                  </a>
+                </div>
+                <!-- accordion heading end -->
+                <!-- accordion collapse begin -->
+                <div id="collapse1" class="collapse search-sidebar-accordion-content">
+
+                  <div class="search-sidebar-checkbox-wrapper">
+                    <label class="custom-input-ctn">
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                      <span class="search-sidebar-count-group">
+                        <span class="name">CC0 1.0</span>
+                        <span class="count">541,193,920</span>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="search-sidebar-checkbox-wrapper">
+                    <label class="custom-input-ctn">
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                      <span class="search-sidebar-count-group">
+                        <span class="name">CC0 4.0</span>
+                        <span class="count">330,492,301</span>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="search-sidebar-checkbox-wrapper">
+                    <label class="custom-input-ctn">
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                      <span class="search-sidebar-count-group">
+                        <span class="name">CC BY-NC 4.0</span>
+                        <span class="count">211,748,142</span>
+                      </span>
+                    </label>
+                  </div>
+
+                </div>
+                <!-- accordion collapse end -->
+              </div>
+              <!-- search sidebar accordion end -->
+
+              <!-- search sidebar accordion begin -->
+              <div class="search-sidebar-accordion-wrapper">
+                <!-- accordion heading begin -->
+                <div class="search-sidebar-accordion-title">
+                  <a data-toggle="collapse" href="#collapse2" aria-expanded="false">
+                    學名
+                  </a>
+                </div>
+                <!-- accordion heading end -->
+                <!-- accordion collapse begin -->
+                <div id="collapse2" class="collapse search-sidebar-accordion-content">
+
+                  <div class="input-group search-sidebar-header-kw">
+                    <input class="form-control" placeholder="搜尋學名" name="search-term" id="search-term" type="text" value="">
+                    <div class="input-group-btn">
+                      <button class="btn" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- taxon checked begin -->
+                  <div class="search-taxon-checked">
+                    <label class="custom-input-ctn">
+                      <input type="checkbox" checked="">
+                      <span class="checkmark"></span>
+                      <span class="name">臺灣水韭 taiwanensis</span>
+                    </label>
+                    <label class="custom-input-ctn">
+                      <input type="checkbox" checked="">
+                      <span class="checkmark"></span>
+                      <span class="name">金門水韭 taiwanensis</span>
+                    </label>
+                  </div>
+                  <!-- taxon checked end -->
+
+                  <!-- taxon-tree-container begin -->
+                  <div class="taxon-tree-container">
+                    <ul>
+                      <li>
+                        <span class="search-sidebar-count-group">
+                          <a data-toggle="collapse" href="#collapse-taxon-kingdom" aria-expanded="false">動物界 Animalia</a>
+                          <span class="count"><a href="#">1,065,240,741</a></span>
+                        </span>
+                        <div id="collapse-taxon-kingdom" class="collapse taxon-tree-collapse">
+                          <ul>
+                            <li>
+                              <span class="search-sidebar-count-group">
+                                <a data-toggle="collapse" href="#collapse-taxon-phylum-1" aria-expanded="false">鉤頭動物門 Acanthocephala</a>
+                                <span class="count"><a href="#">914,862,340</a></span>
+                              </span>
+                              <div id="collapse-taxon-phylum-1" class="collapse taxon-tree-collapse">
+                                <ul>
+                                  <li>
+                                    <span class="search-sidebar-count-group">
+                                      <a data-toggle="collapse" href="#collapse-taxon-class" aria-expanded="false">古棘頭蟲綱 Palaeacanthocephala</a>
+                                      <span class="count"><a href="#">852,927,396</a></span>
+                                    </span>
+                                    <div id="collapse-taxon-class" class="collapse taxon-tree-collapse">
+                                      <ul>
+                                        <li>
+                                          <span class="search-sidebar-count-group">
+                                            <a data-toggle="collapse" href="#collapse-taxon-order" aria-expanded="false">巨吻目 Gigantorhynchida</a>
+                                            <span class="count"><a href="#">459,619,276</a></span>
+                                          </span>
+                                          <div id="collapse-taxon-order" class="collapse taxon-tree-collapse">
+                                            <ul>
+                                              <li>
+                                                <span class="search-sidebar-count-group">
+                                                  <a data-toggle="collapse" href="#collapse-taxon-family" aria-expanded="false">巨吻科 Giganthorhynchidae</a>
+                                                  <span class="count"><a href="#">41,982,430</a></span>
+                                                </span>
+                                                <div id="collapse-taxon-family" class="collapse taxon-tree-collapse">
+                                                  <ul>
+                                                    <li>
+                                                      <span class="search-sidebar-count-group">
+                                                        <a data-toggle="collapse" href="#collapse-taxon-genus" aria-expanded="false">間吻蟲屬 Mediorhynchus</a>
+                                                        <span class="count"><a href="#">9,589,987</a></span>
+                                                      </span>
+                                                      <div id="collapse-taxon-genus" class="collapse taxon-tree-collapse">
+                                                        <ul>
+                                                          <li>
+                                                            <span class="search-sidebar-count-group">
+                                                              <a href="#" aria-expanded="final">東方間吻蟲 orientalis</a>
+                                                              <span class="count"><a href="#">6,901,015</a></span>
+                                                            </span>
+                                                          </li>
+                                                          <li>
+                                                            <span class="search-sidebar-count-group">
+                                                              <a href="#" aria-expanded="final">乳突間吻蟲 papillosus</a>
+                                                              <span class="count"><a href="#">3,351,217</a></span>
+                                                            </span>
+                                                          </li>
+                                                        </ul>
+                                                      </div>
+                                                    </li>
+                                                  </ul>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <span class="search-sidebar-count-group">
+                                            <a data-toggle="collapse" href="#" aria-expanded="false">多形目 Polymorphida</a>
+                                            <span class="count"><a href="#">123,712,192</a></span>
+                                          </span>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li>
+                              <a data-toggle="collapse" href="#" aria-expanded="false">環節動物門 Annelida</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <span class="search-sidebar-count-group">
+                          <a data-toggle="collapse" href="#" aria-expanded="false">古菌界 Archaea</a>
+                          <span class="count"><a href="#">287,588,764</a></span>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="search-sidebar-count-group">
+                          <a data-toggle="collapse" href="#" aria-expanded="false">細菌界 Bacteria</a>
+                          <span class="count"><a href="#">19,385,384</a></span>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="search-sidebar-count-group">
+                          <a data-toggle="collapse" href="#" aria-expanded="false">原藻界 Chromista</a>
+                          <span class="count"><a href="#">14,533,220</a></span>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="search-sidebar-count-group">
+                          <a data-toggle="collapse" href="#" aria-expanded="false">真菌界 Fungi</a>
+                          <span class="count"><a href="#">12,577,668</a></span>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="search-sidebar-count-group">
+                          <a data-toggle="collapse" href="#" aria-expanded="false">植物界 Plantae</a>
+                          <span class="count"><a href="#">9,165,160</a></span>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="search-sidebar-count-group">
+                          <a data-toggle="collapse" href="#" aria-expanded="false">原生生物界 Protozoa</a>
+                          <span class="count"><a href="#">266,318</a></span>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="search-sidebar-count-group">
+                          <a data-toggle="collapse" href="#" aria-expanded="false">病毒 Viruses</a>
+                          <span class="count"><a href="#">43,850</a></span>
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- taxon-tree-container end -->
+
+                </div>
+                <!-- accordion collapse end -->
+              </div>
+              <!-- search sidebar accordion end -->
+
+              <!-- search sidebar accordion begin -->
+              <div class="search-sidebar-accordion-wrapper">
+                <!-- accordion heading begin -->
+                <div class="search-sidebar-accordion-title">
+                  <a data-toggle="collapse" href="#collapse3" aria-expanded="false">
+                    地點
+                  </a>
+                </div>
+                <!-- accordion heading end -->
+                <!-- accordion collapse begin -->
+                <div id="collapse3" class="collapse search-sidebar-accordion-content">
+                  <img src="https://fakeimg.pl/600x400/?text=map" alt="" class="img-responsive">
+                </div>
+                <!-- accordion collapse end -->
+              </div>
+              <!-- search sidebar accordion end -->
+
+              <!-- search sidebar accordion begin -->
+              <div class="search-sidebar-accordion-wrapper">
+                <!-- accordion heading begin -->
+                <div class="search-sidebar-accordion-title">
+                  <a data-toggle="collapse" href="#collapse4" aria-expanded="false">
+                    國家/區域
+                  </a>
+                </div>
+                <!-- accordion heading end -->
+                <!-- accordion collapse begin -->
+                <div id="collapse4" class="collapse search-sidebar-accordion-content">
+
+                  <div class="search-sidebar-checkbox-wrapper">
+                    <label class="custom-input-ctn">
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                      <span class="search-sidebar-count-group">
+                        <span class="name">台灣</span>
+                        <span class="count">296,877</span>
+                      </span>
+                    </label>
+                  </div>
+
+                  <!-- indent begin -->
+                  <div class="search-sidebar-checkbox-wrapper indent">
+                    <label class="custom-input-ctn">
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                      <span class="search-sidebar-count-group">
+                        <span class="name">基隆市</span>
+                        <span class="count">709</span>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="search-sidebar-checkbox-wrapper indent">
+                    <label class="custom-input-ctn">
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                      <span class="search-sidebar-count-group">
+                        <span class="name">新北市</span>
+                        <span class="count">556</span>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="search-sidebar-checkbox-wrapper indent">
+                    <label class="custom-input-ctn">
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                      <span class="search-sidebar-count-group">
+                        <span class="name">台北市</span>
+                        <span class="count">179</span>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="search-sidebar-checkbox-wrapper indent">
+                    <label class="custom-input-ctn">
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                      <span class="search-sidebar-count-group">
+                        <span class="name">桃園市</span>
+                        <span class="count">448</span>
+                      </span>
+                    </label>
+                  </div>
+                  <!-- indent end -->
+
+                  <div class="search-sidebar-checkbox-wrapper">
+                    <label class="custom-input-ctn">
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                      <span class="search-sidebar-count-group">
+                        <span class="name">日本</span>
+                        <span class="count">15,531</span>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="search-sidebar-checkbox-wrapper">
+                    <label class="custom-input-ctn">
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                      <span class="search-sidebar-count-group">
+                        <span class="name">韓國</span>
+                        <span class="count">1,783</span>
+                      </span>
+                    </label>
+                  </div>
+
+                </div>
+                <!-- accordion collapse end -->
+              </div>
+              <!-- search sidebar accordion end -->
+
+              <!-- search sidebar accordion begin -->
+              <div class="search-sidebar-accordion-wrapper">
+                <!-- accordion heading begin -->
+                <div class="search-sidebar-accordion-title">
+                  <a data-toggle="collapse" href="#collapse5" aria-expanded="false">
+                    年份
+                  </a>
+                </div>
+                <!-- accordion heading end -->
+                <!-- accordion collapse begin -->
+                <div id="collapse5" class="collapse search-sidebar-accordion-content">
+                  <div class="search-sidebar-slider-wrapper">
+                    <input type="text" class="js-range-slider" name="my_range" value="" />
+                  </div>
+                </div>
+                <!-- accordion collapse end -->
+              </div>
+              <!-- search sidebar accordion end -->
+
+              <!-- search sidebar accordion begin -->
+              <div class="search-sidebar-accordion-wrapper">
+                <!-- accordion heading begin -->
+                <div class="search-sidebar-accordion-title">
+                  <a data-toggle="collapse" href="#collapse6" aria-expanded="false">
+                    月份
+                  </a>
+                </div>
+                <!-- accordion heading end -->
+                <!-- accordion collapse begin -->
+                <div id="collapse6" class="collapse search-sidebar-accordion-content">
+
+                  <div class="search-sidebar-checkbox-wrapper">
+                    <label class="custom-input-ctn">
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                      <span class="search-sidebar-count-group">
+                        <span class="name">一月</span>
+                        <span class="count">541,193,920</span>
+                      </span>
+                    </label>
+                  </div>
+
+                </div>
+                <!-- accordion collapse end -->
+              </div>
+              <!-- search sidebar accordion end -->
+
+              <!-- search sidebar accordion begin -->
+              <div class="search-sidebar-accordion-wrapper">
+                <!-- accordion heading begin -->
+                <div class="search-sidebar-accordion-title">
+                  <a data-toggle="collapse" href="#collapse7" aria-expanded="false">
+                    資料集
+                  </a>
+                </div>
+                <!-- accordion heading end -->
+                <!-- accordion collapse begin -->
+                <div id="collapse7" class="collapse search-sidebar-accordion-content">
+
+                  <div class="search-sidebar-checkbox-wrapper">
+                    <label class="custom-input-ctn">
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                      <span class="search-sidebar-count-group">
+                        <span class="name">資料集</span>
+                        <span class="count">541,193,920</span>
+                      </span>
+                    </label>
+                  </div>
+
+                </div>
+                <!-- accordion collapse end -->
+              </div>
+              <!-- search sidebar accordion end -->
+
+              <!-- search sidebar accordion begin -->
+              <div class="search-sidebar-accordion-wrapper">
+                <!-- accordion heading begin -->
+                <div class="search-sidebar-accordion-title">
+                  <a data-toggle="collapse" href="#collapse8" aria-expanded="false">
+                    發布者
+                  </a>
+                </div>
+                <!-- accordion heading end -->
+                <!-- accordion collapse begin -->
+                <div id="collapse8" class="collapse search-sidebar-accordion-content">
+
+                  <div class="search-sidebar-checkbox-wrapper">
+                    <label class="custom-input-ctn">
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                      <span class="search-sidebar-count-group">
+                        <span class="name">發布者</span>
+                        <span class="count">541,193,920</span>
+                      </span>
+                    </label>
+                  </div>
+
+                </div>
+                <!-- accordion collapse end -->
+              </div>
+              <!-- search sidebar accordion end -->
+
+              <!-- search sidebar accordion begin -->
+              <div class="search-sidebar-accordion-wrapper">
+                <!-- accordion heading begin -->
+                <div class="search-sidebar-accordion-title">
+                  <a data-toggle="collapse" href="#collapse9" aria-expanded="false">
+                    檔案類型  
+                  </a>
+                </div>
+                <!-- accordion heading end -->
+                <!-- accordion collapse begin -->
+                <div id="collapse9" class="collapse search-sidebar-accordion-content">
+
+                  <div class="search-sidebar-checkbox-wrapper">
+                    <label class="custom-input-ctn">
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                      <span class="search-sidebar-count-group">
+                        <span class="name">檔案類型</span>
+                        <span class="count">541,193,920</span>
+                      </span>
+                    </label>
+                  </div>
+
+                </div>
+                <!-- accordion collapse end -->
+              </div>
+              <!-- search sidebar accordion end -->
+
+            </div>
+            <!-- modal content end -->
+          </div>
+          <!-- modal dialog end -->
+        </div>
+        <!-- search modal end -->
+
+      </div>
+      <!-- search sidebar end -->
+
+
+      <!-- search content begin -->
+      <div class="search-content">
+
+        <!-- breadcrumb begin -->
+        <ol class="breadcrumb">
+          <li><a href="00-index.html">首頁</a></li>
+          <li class="active">搜尋出現紀錄</li>
+        </ol>
+        <!-- breadcrumb end -->
+
+        <!-- search sontent heading begin -->
+        <div class="search-content-heading-wrapper">
+          <h1 class="heading-lg">
+            出現紀錄
+            <span class="heading-footnote">共 5,858,142 筆資料</span>
+          </h1>
+          <span>篩選條件：</span>
+          <span class="search-content-sort-tag"><i>Beutenbergia cavernae</i> Groth et al., 1999</span>
+          <span class="search-content-sort-tag">1000-1999</span>
+        </div>
+        <!-- search sontent heading end -->
+
+        <!-- TABS&CONTENT begin -->
+        <div class="table-responsive">
+          <ul class="nav nav-tabs nav-justified search-content-tab">
+            <li class="active"><a data-toggle="tab" href="#menu1">資料列表</a></li>
+            <li><a data-toggle="tab" href="#menu2">影像集</a></li>
+            <li><a data-toggle="tab" href="#menu3">分布地圖</a></li>
+            <li><a data-toggle="tab" href="#menu4">分類系統</a></li>
+            <li><a data-toggle="tab" href="#menu5">指標</a></li>
+            <li><a data-toggle="tab" href="#menu6">資料下載</a></li>
+          </ul>
+        </div>
+
+        <!-- tab-content begin -->
+        <div class="tab-content">
+          <!-- 資料列表 begin -->
+          <div id="menu1" class="tab-pane fade in active">
+            <!-- table responsive begin -->
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>學名</th>
+                    <th>國家/地區</th>
+                    <th>座標</th>
+                    <th>年/月</th>
+                    <th>紀錄依據</th>
+                    <th>數據集</th>
+                    <th>界</th>
+                    <th>門</th>
+                    <th>綱</th>
+                    <th>目</th>
+                    <th>科</th>
+                    <th>屬</th>
+                    <th>種</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><i>Segmentina Fleming,1818</i></td>
+                    <td>台北市</td>
+                    <td>25.0N, 121.6E</td>
+                    <td>1981/4</td>
+                    <td>人類觀察</td>
+                    <td>TaiCoL</td>
+                    <td>動物界</td>
+                    <td>貝類</td>
+                    <td>蝓</td>
+                    <td>目</td>
+                    <td>科</td>
+                    <td>屬</td>
+                    <td>種</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- table responsive end -->
+            <!-- pagination begin -->
+            <div class="center-block text-center">
+              <ul class="pagination">
+                <li>
+                  <a href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                  <a href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- pagination end -->
+          </div>
+          <!-- 資料列表 end -->
+
+          <!-- 影像集 begin -->
+          <div id="menu2" class="tab-pane fade">
+            <div class="container-fluid search-content-grid-wrapper">
+              <div class="row">
+                <div class="col-md-3 col-xs-6">
+                  <div class="list-group">
+                    <a href="#"><img src="images/photo-1.jpg" class="img-responsive"></a>
+                    <a class="list-group-item" href="#">以台灣生命大百科物種資訊為核心的生物多樣性資訊平台</a>
+                  </div>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                  <div class="list-group">
+                    <a href="#"><img src="images/photo-2.jpg" class="img-responsive"></a>
+                    <a class="list-group-item" href="#">以台灣生命大百科物種資訊為核心的生物多樣性資訊平台</a>
+                  </div>
+                </div>
+              </div>
+              <!-- pagination begin -->
+              <div class="center-block text-center">
+                <ul class="pagination">
+                  <li>
+                    <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li>
+                    <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- pagination end -->
+            </div>
+          </div>
+          <!-- 影像集 end -->
+
+          <!-- 分布地圖 begin -->
+          <div id="menu3" class="tab-pane fade">
+            <img src="https://fakeimg.pl/600x400/?text=map" alt="" class="img-responsive">
+          </div>
+          <!-- 分布地圖 end -->
+
+          <!-- 分類系統 begin -->
+          <div id="menu4" class="tab-pane fade">
+            <div class="container-fluid search-content-grid-wrapper">
+              <div class="row">
+
+                <div class="col-md-6 col-xs-12">
+                  <div class="tools-intro-wrapper">
+                    <div class="tools-title">以學名分類</div>
+                    <div class="tools-content column-fixed-h330">
+                      <!-- taxon-tree-container begin -->
+                      <div class="taxon-tree-container">
+                        <ul>
+                          <li>
+                            <span class="search-sidebar-count-group">
+                              <a data-toggle="collapse" href="#" aria-expanded="false">動物界 Animalia</a>
+                              <span class="count"><a href="#">1,065,240,741</a></span>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="search-sidebar-count-group">
+                              <a data-toggle="collapse" href="#" aria-expanded="false">古菌界 Archaea</a>
+                              <span class="count"><a href="#">287,588,764</a></span>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="search-sidebar-count-group">
+                              <a data-toggle="collapse" href="#" aria-expanded="false">細菌界 Bacteria</a>
+                              <span class="count"><a href="#">19,385,384</a></span>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="search-sidebar-count-group">
+                              <a data-toggle="collapse" href="#" aria-expanded="false">原藻界 Chromista</a>
+                              <span class="count"><a href="#">14,533,220</a></span>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="search-sidebar-count-group">
+                              <a data-toggle="collapse" href="#" aria-expanded="false">真菌界 Fungi</a>
+                              <span class="count"><a href="#">12,577,668</a></span>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="search-sidebar-count-group">
+                              <a data-toggle="collapse" href="#" aria-expanded="false">植物界 Plantae</a>
+                              <span class="count"><a href="#">9,165,160</a></span>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="search-sidebar-count-group">
+                              <a data-toggle="collapse" href="#" aria-expanded="false">原生生物界 Protozoa</a>
+                              <span class="count"><a href="#">266,318</a></span>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="search-sidebar-count-group">
+                              <a data-toggle="collapse" href="#" aria-expanded="false">病毒 Viruses</a>
+                              <span class="count"><a href="#">43,850</a></span>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- taxon-tree-container end -->
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-xs-12">
+                  <div class="tools-intro-wrapper">
+                    <div class="tools-title">以圖表分類</div>
+                    <div class="tools-content column-fixed-h330">
+                      <img src="https://fakeimg.pl/600x300/?text=chart" alt="" class="img-responsive">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xs-12">
+                  <div class="tools-intro-wrapper">
+                    <div class="tools-title">以物種分類</div>
+                    <div class="tools-content">
+                      <!-- table responsive begin -->
+                      <div class="table-responsive">
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th>學名</th>
+                              <th>國家/地區</th>
+                              <th>座標</th>
+                              <th>年/月</th>
+                              <th>紀錄依據</th>
+                              <th>數據集</th>
+                              <th>界</th>
+                              <th>門</th>
+                              <th>綱</th>
+                              <th>目</th>
+                              <th>科</th>
+                              <th>屬</th>
+                              <th>種</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><i>Segmentina Fleming,1818</i></td>
+                              <td>台北市</td>
+                              <td>25.0N, 121.6E</td>
+                              <td>1981/4</td>
+                              <td>人類觀察</td>
+                              <td>TaiCoL</td>
+                              <td>動物界</td>
+                              <td>貝類</td>
+                              <td>蝓</td>
+                              <td>目</td>
+                              <td>科</td>
+                              <td>屬</td>
+                              <td>種</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!-- table responsive end -->
+                      <!-- pagination begin -->
+                      <div class="center-block text-center">
+                        <ul class="pagination">
+                          <li>
+                            <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            </a>
+                          </li>
+                          <li class="active"><a href="#">1</a></li>
+                          <li><a href="#">2</a></li>
+                          <li><a href="#">3</a></li>
+                          <li><a href="#">4</a></li>
+                          <li><a href="#">5</a></li>
+                          <li>
+                            <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- pagination end -->
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- 分類系統 end -->
+
+          <!-- 指標 begin -->
+          <div id="menu5" class="tab-pane fade">
+            <div class="container-fluid search-content-grid-wrapper">
+              <div class="row">
+                
+                <div class="col-xs-12">
+                  <div class="tools-intro-wrapper">
+                    <div class="tools-title">月份</div>
+                    <div class="tools-content">
+                      <img src="https://fakeimg.pl/600x120/?text=chart" alt="" class="img-responsive">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xs-12">
+                  <div class="tools-intro-wrapper">
+                    <div class="tools-title">年份</div>
+                    <div class="tools-content">
+                      <img src="https://fakeimg.pl/600x120/?text=chart" alt="" class="img-responsive">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xs-12">
+                  <div class="tools-intro-wrapper">
+                    <div class="tools-title">授權狀態</div>
+                    <div class="tools-content">
+                      <img src="https://fakeimg.pl/600x120/?text=chart" alt="" class="img-responsive">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xs-12">
+                  <div class="tools-intro-wrapper">
+                    <div class="tools-title">資料集</div>
+                    <div class="tools-content">
+                      <!-- table responsive begin -->
+                      <div class="table-responsive">
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th>資料集</th>
+                              <th>出現次數</th>
+                              <th>&nbsp;</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Lycopodium veitchii Christ, GBIF Backbone Taxonomy</td>
+                              <td>67</td>
+                              <td>
+                                <div class="chart-bar-h-bg">
+                                  <span class="chart-value-bg" style="width: 30%;"></span>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Herbarium of Taiwan Forestry Research Institute</td>
+                              <td>64</td>
+                              <td>
+                                <div class="chart-bar-h-bg">
+                                  <span class="chart-value-bg" style="width: 28%;"></span>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>The digitization of plant specimens of NTU</td>
+                              <td>21</td>
+                              <td>
+                                <div class="chart-bar-h-bg">
+                                  <span class="chart-value-bg" style="width: 15%;"></span>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Database of Native Plants in Taiwan</td>
+                              <td>19</td>
+                              <td>
+                                <div class="chart-bar-h-bg">
+                                  <span class="chart-value-bg" style="width: 12%;"></span>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> The vascular plants collection (P) at the Herbarium</td>
+                              <td>12</td>
+                              <td>
+                                <div class="chart-bar-h-bg">
+                                  <span class="chart-value-bg" style="width: 10%;"></span>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!-- table responsive end -->
+                      <!-- pagination begin -->
+                      <div class="center-block text-center">
+                        <ul class="pagination">
+                          <li>
+                            <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            </a>
+                          </li>
+                          <li class="active"><a href="#">1</a></li>
+                          <li><a href="#">2</a></li>
+                          <li><a href="#">3</a></li>
+                          <li><a href="#">4</a></li>
+                          <li><a href="#">5</a></li>
+                          <li>
+                            <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- pagination end -->
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- 指標 end -->
+
+          <!-- 資料下載 begin -->
+          <div id="menu6" class="tab-pane fade">
+            <div class="container-fluid search-content-grid-wrapper">
+              <div class="row">
+
+                <div class="col-md-6 col-xs-12">
+                  <div class="tools-intro-wrapper">
+                    <div class="tools-title">檔案類型：DwC-A</div>
+                    <div class="tools-content">
+                      <div class="center-block text-center">
+                        <p>預計檔案容量：25.6 MB</p>
+                        <button type="button" class="btn btn-sunset">下載</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-xs-12">
+                  <div class="tools-intro-wrapper">
+                    <div class="tools-title">檔案類型：RTF</div>
+                    <div class="tools-content">
+                      <div class="center-block text-center">
+                        <p>預計檔案容量：14.2 MB</p>
+                        <button type="button" class="btn btn-sunset">下載</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>               
+
+              </div>
+            </div>
+          </div>
+          <!-- 資料下載 end -->
+        </div>
+        <!-- tab-content end -->
+        <!-- TABS&CONTENT end -->
+
+      </div>
+      <!-- search content end -->
+    </div>
+  </div>
+  <!-- search container end -->
+
+  <!-- footer begin -->
+  <div class="container-fluid footer-wrapper">
+    <div class="container">
+      <div id='calendar'></div>
+      <a href="00-index.html"><img src="images/taibif-logo-w-l.png" class="ft-brand center-block"></a>
+      <p class="ft-contact">
+          <span class="myicon icon-pin-stroke" aria-hidden="true">11529 台北市南港區研究院路二段 128 號</span>
+          <span class="ft-xs-block">跨領域科技研究大樓 C301室</span>
+      </p>
+      <p class="ft-copywrite">Copyright © TaiBIF 臺灣生物多樣性資訊機構</p>
+    </div>
+  </div>
+  <!-- footer end -->
+
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/page.js"></script>
+
+  <!-- range slider -->
+  <script src="js/ion.rangeSlider.min.js"></script>
+  <script type="text/javascript">
+    $(".js-range-slider").ionRangeSlider({
+        type: "double",
+        skin: "round",
+        grid: true,
+        grid_num: 2,
+        min: 1000,
+        max: 1999,
+        from: 1200,
+        to: 1800
+    });
+  </script>
+
+  </body>
+</html>
